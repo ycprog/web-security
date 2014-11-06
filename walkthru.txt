@@ -1,0 +1,14 @@
+CORS:
+// Protect thru x-frame-header
+http://localhost:2080/secure/cors.php
+http://sig.yclim.com/web/cors.php
+
+
+CRSF:
+// Protect thru unique id auth
+http://localhost:2080/secure/csrf.php
+http://sig.yclim.com/web/csrf_withdraw.php
+After that: comment away solutions
+
+Clickjacking:
+http://sig.yclim.com/web/clickjacking.php

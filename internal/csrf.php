@@ -13,9 +13,10 @@ if ( !isset($_SESSION['money']) ) {
 	$_SESSION['money'] = 300;
 }
 
-header('X-Frame-Options: deny');
+//header('X-Frame-Options: deny');
 //header('X-Frame-Options: SAMEORIGIN');
 //header('X-Frame-Options: ALLOW-FROM https://localhost:2080/');
+
 ?>
 
 <!doctype html>
@@ -43,6 +44,24 @@ header('X-Frame-Options: deny');
 			}
 		});
 	}
+
+	function throwAwayMoney() {
+		$.ajax({
+			type: 'GET',
+			url: 'http://localhost:2080/secure/api.php',
+			data: {
+				type: 2,
+				withdraw: 200,
+				key: '<?php echo md5( session_id() ) ?>'
+			},
+			dataType: 'json',
+			success: function( data ) {
+				if( data.result ) {
+					window.location.href = "http://localhost:2080/secure/csrf.php";
+				}
+			}
+		});
+	}
 	</script>
 </head>
 
@@ -55,7 +74,8 @@ header('X-Frame-Options: deny');
 <?php } else { ?>
 
 <div id="result">
-I have $<?php echo $_SESSION['money'] ?>!!
+<h2>I have $<?php echo $_SESSION['money'] ?>!!</h2>
+<br />Throw Away $200? <button onclick="throwAwayMoney()" class="btn btn-default">Go</button>
 </div>
 <?php } ?>
 
