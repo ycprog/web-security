@@ -7,7 +7,7 @@
 
 require_once "common.php";
 
-header('X-Frame-Options: deny');
+//header('X-Frame-Options: deny');
 //header('X-Frame-Options: SAMEORIGIN');
 //header('X-Frame-Options: ALLOW-FROM https://localhost:2080/');
 ?>

@@ -36,10 +36,10 @@ switch( $nRequestType ) {
 		break;
 	case WITHDRAW_MONEY:
 		// CSRF Protection check
-		if ( md5( session_id() ) != GET('key') ) {
+		/*if ( md5( session_id() ) != GET('key') ) {
 			$szRes['result'] = false;
 			break;
-		}
+		}*/
 
 		if ( isset($_SESSION['login']) && $_SESSION['login'] === true ) {
 			$nWithAmount = intval(GET('withdraw'));
@@ -61,7 +61,7 @@ header('Content-Type: application/json');
 /**************/
 /* Allow CORS */
 //header('Access-Control-Allow-Origin: http://sig.yclim.com');
-// header('Access-Control-Allow-Origin: *');
+//header('Access-Control-Allow-Origin: *');
 //header('Access-Control-Allow-Origin: http://google.com');
 
 

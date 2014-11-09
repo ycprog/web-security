@@ -1,5 +1,5 @@
 CORS:
-// Protect thru x-frame-header
+// Protect thru Access-Control-Allow-Origin
 http://localhost:2080/secure/cors.php
 http://sig.yclim.com/web/cors.php
 
@@ -11,4 +11,6 @@ http://sig.yclim.com/web/csrf_withdraw.php
 After that: comment away solutions
 
 Clickjacking:
+// Protect thru X-Frame-Options
+http://localhost:2080/secure/csrf.php
 http://sig.yclim.com/web/clickjacking.php

@@ -10,7 +10,7 @@ require_once "common.php";
 session_start();
 
 if ( !isset($_SESSION['money']) ) {
-	$_SESSION['money'] = 300;
+	$_SESSION['money'] = 2000;
 }
 
 //header('X-Frame-Options: deny');
