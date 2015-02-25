@@ -50,7 +50,8 @@ header('X-Frame-Options: deny');
 
 <body>
 
-<h1>Cross-Origin Resource Sharing</h1>
+<h1>http://sig.yclim.com</h1>
+<h2>Cross-Origin Resource Sharing</h2>
 
 <div>
 <label for="personID"></label><input id="personID" type="text">

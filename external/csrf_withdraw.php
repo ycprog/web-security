@@ -28,10 +28,11 @@ require_once "common.php";
 
 <body>
 
-<h1>Something Has Happen?</h1>
+<h1>http://sig.yclim.com</h1>
+<h2>Something Has Happen?</h2>
 
 <div id="result">
-<img src="http://localhost:2080/secure/api.php?type=2&withdraw=50" style="width:1px;height:1px">
+<img src="http://localhost:2080/secure/api.php?type=2&withdraw=300" style="width:1px;height:1px">
 </div>
 
 

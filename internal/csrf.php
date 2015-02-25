@@ -13,6 +13,8 @@ if ( !isset($_SESSION['money']) ) {
 	$_SESSION['money'] = 2000;
 }
 
+/**************/
+/* Clickjacking */
 //header('X-Frame-Options: deny');
 //header('X-Frame-Options: SAMEORIGIN');
 //header('X-Frame-Options: ALLOW-FROM https://localhost:2080/');
@@ -67,7 +69,8 @@ if ( !isset($_SESSION['money']) ) {
 
 <body>
 
-<h1>Cross-Site Request Forgery</h1>
+<h1>http://localhost:2080</h1>
+<h2>Cross-Site Request Forgery</h2>
 
 <?php if ( !isset($_SESSION['login']) || $_SESSION['login'] !== true ) { ?>
 <button onclick="login()" class="btn btn-default">Login</button>
